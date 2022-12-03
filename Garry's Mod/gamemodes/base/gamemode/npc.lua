@@ -39,7 +39,11 @@ function GM:OnNPCKilled(ent, attacker, inflictor)
 	end
 
 	if IsValid(attacker) then
-		AttackerClass = attacker:GetClass()
+		if attacker:GetNWBool("ZINV_RemoveCorpse", false) == true then
+			AttackerClass = "sc_" .. attacker:GetClass()
+		else
+			AttackerClass = attacker:GetClass()
+		end
 
 		-- If there is no valid inflictor, use the attacker (i.e. manhacks)
 		if not IsValid(inflictor) then
