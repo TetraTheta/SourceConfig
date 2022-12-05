@@ -88,9 +88,9 @@ function SWEP:Initialize()
 end
 
 function SWEP:SetupDataTables()
-	self:NetworkVar("Int", initSecondaryType, "SecondaryType")
-	self:SetSecondaryType(initSecondaryType)
+	self:NetworkVar("Int", 0, "SecondaryType")
 	self:NetworkVarNotify("SecondaryType", self.OnSecondaryTypeChanged)
+	self:SetSecondaryType(initSecondaryType)
 end
 
 --
@@ -277,3 +277,70 @@ function SWEP:FireAnimationEvent(pos, ang, event, options)
 	-- Disable Brass Shell Ejection
 	if event == 6001 then return true end
 end
+
+--
+-- Save SWEP Secondary Type and Load it after level transition
+--
+-- 1. saverestore
+-- Only care about actual players because NPC doesn't do secondary fire I guess
+saverestore.AddSaveHook("SCAdminPistolState", function(save)
+	if CLIENT then return end
+	tbl = {}
+	for k, v in ipairs(player.GetHumans()) do
+		if IsValid(v:GetWeapon(className)) then
+			tbl[v:AccountID()] = v:GetWeapon(className):GetSecondaryType()
+		end
+	end
+	print("saverestore savehook")
+	PrintTable(tbl)
+	saverestore.WriteTable(tbl, save)
+end)
+function SWEP:OnRestore()
+	saverestore.AddRestoreHook("SCAdminPistolState", function(save)
+		if CLIENT then return end
+		tbl = saverestore.ReadTable(save)
+		print("onrestore saverestore restorehook")
+		PrintTable(tbl)
+		for k, v in pairs(tbl) do
+			for _, ply in ipairs(player.GetHumans()) do
+				local wpn = vv:GetWeapon(className)
+				if IsValid(wpn) then
+					wpn:SetSecondaryType(v)
+				end
+			end
+		end
+	end)
+end
+saverestore.AddRestoreHook("SCAdminPistolState", function(save)
+	if CLIENT then return end
+	tbl = saverestore.ReadTable(save)
+	print("saverestore restorehook")
+	PrintTable(tbl)
+	for k, v in pairs(tbl) do
+		for _, ply in ipairs(player.GetHumans()) do
+			local wpn = vv:GetWeapon(className)
+			if IsValid(wpn) then
+				wpn:SetSecondaryType(v)
+			end
+		end
+	end
+end)
+-- 2. Shutdown & PlayerInitialSpawn
+--[[
+hook.Add("ShutDown", "SCAdminPistolState_SD", function()
+	tbl = {}
+	for k, v in ipairs(player.GetHumans()) do
+		if IsValid(v:GetWeapon(className)) then
+			tbl[v:AccountID()] = v:GetWeapon(className):GetSecondaryType()
+		end
+	end
+	print("shutdown")
+	PrintTable(tbl)
+	tblString = util.TableToKeyValues(tbl, "ap")
+	file.Write("scdata.txt", tblString)
+end)
+hook.Add("PlayerInitialSpawn", "SCAdminPistolState_PIS", function(ply, transition)
+	if not transition then return end
+	tblString = file.Read("scdata.txt")
+end)
+]]--

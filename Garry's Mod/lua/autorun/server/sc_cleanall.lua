@@ -18,7 +18,7 @@ local function CleanAll(ply, cmd, args, str)
 		v:ConCommand("r_cleardecals")
 	end
 
-	-- Clean debris & gibs
+	-- Clean debris & gibs & ragdolls
 	for k, v in ipairs(ents.GetAll()) do
 		-- debris
 		if v:GetClass() == "prop_physics" and bit.band(v:GetSpawnFlags(), SF_PHYSPROP_IS_GIB) > 0 then
@@ -26,6 +26,10 @@ local function CleanAll(ply, cmd, args, str)
 		end
 		-- gibs
 		if v:GetClass() == "gib" then
+			v:Remove()
+		end
+		-- ragdoll
+		if v:GetClass() == "prop_ragdoll" then
 			v:Remove()
 		end
 	end
