@@ -11,6 +11,7 @@ local function UpdateMaps()
 	-- Collection of abstract maps because I don't want them in the Others category
 	MapNames["abstract_hallways"] = "Abstract Maps"
 	MapNames["amnesialona"] = "Abstract Maps"
+	MapNames["failing_boundaries"] = "Abstract Maps"
 	MapNames["hylophobia_old"] = "Abstract Maps"
 	MapNames["hylophobia_winter"] = "Abstract Maps"
 	MapNames["hylophobia"] = "Abstract Maps"
@@ -27,6 +28,17 @@ local function UpdateMaps()
 	-- Aerial Harassment
 	MapNames["aerialharassment1"] = "Aerial Harassment"
 	MapNames["aerialharassment2"] = "Aerial Harassment"
+	-- Another Universe
+	MapNames["another_universe_1"] = "Another Universe"
+	MapNames["another_universe_2"] = "Another Universe"
+	MapNames["another_universe_3"] = "Another Universe"
+	MapNames["another_universe_4"] = "Another Universe"
+	MapNames["another_universe_5"] = "Another Universe"
+	MapNames["another_universe_6"] = "Another Universe"
+	MapNames["another_universe_7"] = "Another Universe"
+	MapNames["another_universe_8"] = "Another Universe"
+	MapNames["another_universe_9"] = "Another Universe"
+	MapNames["another_universe_10"] = "Another Universe"
 	-- Antlions Everywhere
 	MapNames["brighe"] = "Antlions Everywhere"
 	MapNames["city-s"] = "Antlions Everywhere"

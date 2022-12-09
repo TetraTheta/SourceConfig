@@ -221,6 +221,11 @@ function create_npc(entry, pos)
 			npc:SetAngles(Angle(0, math.random(0, 360), 0))
 			npc:Spawn()
 
+			-- In case of weapon didn't given to NPC
+			if entry.weapon and entry.weapon ~= "" then
+				npc:Give(entry.weapon)
+			end
+
 			if entry.model and entry.model ~= "" then
 				npc:SetModel(entry.model)
 			end
