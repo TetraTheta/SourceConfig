@@ -283,6 +283,7 @@ end
 --
 -- 1. saverestore
 -- Only care about actual players because NPC doesn't do secondary fire I guess
+--[[
 saverestore.AddSaveHook("SCAdminPistolState", function(save)
 	if CLIENT then return end
 	tbl = {}
@@ -325,6 +326,7 @@ saverestore.AddRestoreHook("SCAdminPistolState", function(save)
 		end
 	end
 end)
+]]
 -- 2. Shutdown & PlayerInitialSpawn
 --[[
 hook.Add("ShutDown", "SCAdminPistolState_SD", function()
