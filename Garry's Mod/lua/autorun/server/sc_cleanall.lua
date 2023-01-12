@@ -45,4 +45,7 @@ local function CleanAll(ply, cmd, args, str)
 	net.Send(ply)
 end
 
+local function CleanModels(ply, cmd, args, str)
+end
+
 concommand.Add("cleanall", CleanAll, nil, "Clean All", 0)
