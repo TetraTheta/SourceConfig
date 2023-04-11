@@ -1,0 +1,18 @@
+"Commands"
+{
+	"FriendlyFire Commands"
+	{
+		"Toggle FriendlyFire"
+		{
+			"cmd"			"sm_ff #1"
+			"admin"			"sm_ff"
+			"execute"		"server"
+			"1"
+			{
+			"type" 		"server"
+			"title"		"Friendly Fire"
+			"1"		"Toggle"
+			}
+		}
+	}
+}

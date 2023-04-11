@@ -1,0 +1,19 @@
+"Menu"
+{
+	"PlayerSettings"
+	{
+	}
+	"SoundSettings"
+	{
+	}
+	"Voting"
+	{
+		"item"		"SurvivalVote"
+		"item"		"MapVote"
+		"item"		"RestartMapVote"
+		"item"		"SkipIntroVote"
+	}
+	"Other"
+	{
+	}
+}
