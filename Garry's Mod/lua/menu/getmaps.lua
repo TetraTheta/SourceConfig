@@ -562,6 +562,8 @@ local function UpdateMaps()
 	-- Unusual Adventure
 	MapNames["unusual_adventure"] = "Unusual Adventure"
 	MapNames["unusual_adventure2ep1"] = "Unusual Adventure"
+	-- Zombie Escape
+	MapNames["ze_"] = "Zombie Escape"
 	--
 	-- Custom map list END
 	--
