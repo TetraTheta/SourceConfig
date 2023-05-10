@@ -78,7 +78,12 @@ local function UpdateMaps()
 	MapNames["level_6"] = "Bunker 66"
 	MapNames["outro"] = "Bunker 66"
 	-- Campaigns because I don't want them in the Others category
+	MapNames["courage"] = "Campaigns"
 	MapNames["formoney"] = "Campaigns"
+	MapNames["overrun"] = "Campaigns"
+	MapNames["raid_on_nova_prison_gmod"] = "Campaigns"
+	MapNames["third_party"] = "Campaigns"
+	MapNames["train_station_zombies_campaign"] = "Campaigns"
 	-- City 25
 	MapNames["city25_01"] = "City 25"
 	MapNames["city25_02"] = "City 25"
@@ -143,7 +148,7 @@ local function UpdateMaps()
 	MapNames["dw_ep1_06"] = "Dangerous World"
 	MapNames["dw_ep1_07"] = "Dangerous World"
 	MapNames["dw_ep1_08"] = "Dangerous World"
-	MapNames["creators"] = "Dangerous World"
+	--MapNames["creators"] = "Dangerous World"
 	-- Day Light
 	MapNames["ep2_aquaduct-1_5_test"] = "Day Light"
 	MapNames["ep2_aquaduct-2_5"] = "Day Light"
@@ -318,6 +323,11 @@ local function UpdateMaps()
 	MapNames["leonhl2_1b"] = "Leon SP Mappack"
 	MapNames["leonhl2_1c"] = "Leon SP Mappack"
 	MapNames["leonhl2_1d"] = "Leon SP Mappack"
+	-- Live To Fight Another Day
+	MapNames["smc_city_01"] = "Live To Fight Another Day"
+	MapNames["smc_city_02"] = "Live To Fight Another Day"
+	MapNames["smc_city_03"] = "Live To Fight Another Day"
+	MapNames["smc_city_04"] = "Live To Fight Another Day"
 	-- Lost
 	MapNames["lost_part_1"] = "Lost"
 	MapNames["lost_part_2a"] = "Lost"
@@ -326,6 +336,30 @@ local function UpdateMaps()
 	MapNames["lost_part_5"] = "Lost"
 	MapNames["lost_part_6"] = "Lost"
 	MapNames["lost_part_7"] = "Lost"
+	-- Map Labs 09: Back on Track
+	MapNames["ml09_amateur"] = "Map Labs 09: Back on Track"
+	MapNames["ml09_amateur_2"] = "Map Labs 09: Back on Track"
+	MapNames["ml09_doublebarreledfactor"] = "Map Labs 09: Back on Track"
+	MapNames["ml09_extra_untilted"] = "Map Labs 09: Back on Track"
+	MapNames["ml09_factory"] = "Map Labs 09: Back on Track"
+	MapNames["ml09_factory_2"] = "Map Labs 09: Back on Track"
+	MapNames["ml09_gristleizer"] = "Map Labs 09: Back on Track"
+	MapNames["ml09_hotlinemetrocop"] = "Map Labs 09: Back on Track"
+	MapNames["ml09_hurricane"] = "Map Labs 09: Back on Track"
+	MapNames["ml09_hurricane2"] = "Map Labs 09: Back on Track"
+	MapNames["ml09_in_stabilitea"] = "Map Labs 09: Back on Track"
+	MapNames["ml09_lockdown_final"] = "Map Labs 09: Back on Track"
+	MapNames["ml09_prisonerx"] = "Map Labs 09: Back on Track"
+	MapNames["ml09_rawsewage"] = "Map Labs 09: Back on Track"
+	MapNames["ml09_retreatandadvance"] = "Map Labs 09: Back on Track"
+	MapNames["ml09_sabotage"] = "Map Labs 09: Back on Track"
+	MapNames["ml09_scavenger_01"] = "Map Labs 09: Back on Track"
+	MapNames["ml09_scavenger_02"] = "Map Labs 09: Back on Track"
+	MapNames["ml09_steele01"] = "Map Labs 09: Back on Track"
+	--MapNames["ml09_steele01_background"] = "Map Labs 09: Back on Track"
+	MapNames["ml09_traplessmansion"] = "Map Labs 09: Back on Track"
+	--MapNames["ml09_traplessmansion_background"] = "Map Labs 09: Back on Track"
+	MapNames["ml09_trespasser"] = "Map Labs 09: Back on Track"
 	-- Mega City One
 	MapNames["c0_1_intro_edited_1"] = "Mega City One"
 	MapNames["c1_1_ancient_dust_v3"] = "Mega City One"
@@ -440,6 +474,8 @@ local function UpdateMaps()
 	MapNames["return_ch_2"] = "return"
 	MapNames["sceene_test"] = "return"
 	MapNames["test"] = "return"
+	-- Rubble
+	MapNames["hl2_rubble"] = "Rubble"
 	-- Shootbang
 	MapNames["shootbang_1"] = "Shootbang"
 	MapNames["shootbang_2"] = "Shootbang"
@@ -465,6 +501,11 @@ local function UpdateMaps()
 	MapNames["15_uvalno_villa"] = "Silesia"
 	MapNames["16_uvalno_undertower"] = "Silesia"
 	MapNames["17_uvalno_kopec"] = "Silesia"
+	-- SIREN
+	MapNames["map-1"] = "SIREN"
+	MapNames["map-1b"] = "SIREN"
+	MapNames["map-2"] = "SIREN"
+	MapNames["map-arrival"] = "SIREN"
 	-- Slums
 	MapNames["slums_1"] = "Slums"
 	MapNames["slums_2"] = "Slums"
@@ -499,6 +540,29 @@ local function UpdateMaps()
 	-- The Antagonist's Story
 	MapNames["gm_antagoniststory"] = "The Antagonist's Story"
 	MapNames["antagonistnovaprospekt_01"] = "The Antagonist's Story"
+	-- The Citizen Returns
+	MapNames["sp_base"] = "The Citizen Returns"
+	MapNames["sp_c14_1"] = "The Citizen Returns"
+	MapNames["sp_c14_2"] = "The Citizen Returns"
+	MapNames["sp_c14_3"] = "The Citizen Returns"
+	MapNames["sp_c14_4"] = "The Citizen Returns"
+	MapNames["sp_c14_5"] = "The Citizen Returns"
+	MapNames["sp_canal1"] = "The Citizen Returns"
+	MapNames["sp_canal2"] = "The Citizen Returns"
+	MapNames["sp_canyon"] = "The Citizen Returns"
+	MapNames["sp_casino"] = "The Citizen Returns"
+	MapNames["sp_casino2"] = "The Citizen Returns"
+	MapNames["sp_ending"] = "The Citizen Returns"
+	MapNames["sp_intro"] = "The Citizen Returns"
+	MapNames["sp_postsquare"] = "The Citizen Returns"
+	MapNames["sp_precasino"] = "The Citizen Returns"
+	MapNames["sp_presquare"] = "The Citizen Returns"
+	MapNames["sp_square"] = "The Citizen Returns"
+	MapNames["sp_streetwar"] = "The Citizen Returns"
+	MapNames["sp_streetwar2"] = "The Citizen Returns"
+	MapNames["sp_streetwar3"] = "The Citizen Returns"
+	MapNames["sp_waterplant"] = "The Citizen Returns"
+	MapNames["sp_waterplant2"] = "The Citizen Returns"
 	-- The Event in Village
 	MapNames["village_01"] = "The Event in Village"
 	MapNames["village_02"] = "The Event in Village"
@@ -785,7 +849,10 @@ local IgnoreMaps = {
 	["intro"] = true,
 	["test"] = true,
 	-- Other maps should be ignored
+	["creators"] = true,
 	["ex2_background"] = true,
+	["ml09_steele01_background"] = true,
+	["ml09_traplessmansion_background"] = true,
 }
 
 local MapList = {}
