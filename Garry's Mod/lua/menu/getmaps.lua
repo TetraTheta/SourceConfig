@@ -476,6 +476,7 @@ local function UpdateMaps()
 	MapNames["test"] = "return"
 	-- Rubble
 	MapNames["hl2_rubble"] = "Rubble"
+	MapNames["hl2_rubble2"] = "Rubble"
 	-- Shootbang
 	MapNames["shootbang_1"] = "Shootbang"
 	MapNames["shootbang_2"] = "Shootbang"
@@ -583,6 +584,15 @@ local function UpdateMaps()
 	MapNames["mpr_030_sabotage"] = "The Masked Prisoner"
 	MapNames["mpr_040_regroup"] = "The Masked Prisoner"
 	MapNames["mpr_050_finale"] = "The Masked Prisoner"
+	-- The Sewer
+	MapNames["sewer1"] = "The Sewer"
+	MapNames["sewer2"] = "The Sewer"
+	MapNames["sewer3"] = "The Sewer"
+	MapNames["sewer4"] = "The Sewer"
+	MapNames["sewer5"] = "The Sewer"
+	MapNames["sewer6"] = "The Sewer"
+	MapNames["sewer7"] = "The Sewer"
+	MapNames["sewer8"] = "The Sewer"
 	-- tr1p
 	MapNames["map1"] = "tr1p"
 	MapNames["map2"] = "tr1p"
