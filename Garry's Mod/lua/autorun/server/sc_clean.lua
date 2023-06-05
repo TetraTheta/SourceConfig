@@ -159,7 +159,7 @@ local function CleanRagdoll()
 	-- Instead of restoring value, just set it to default because it doesn't work
 	RunConsoleCommand("g_ragdoll_maxcount", "0")
 
-	timer.Simple(0.1, function()
+	timer.Simple(1, function()
 		RunConsoleCommand("g_ragdoll_maxcount", "32")
 	end)
 
