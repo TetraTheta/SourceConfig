@@ -336,6 +336,25 @@ local function UpdateMaps()
 	MapNames["lost_part_5"] = "Lost"
 	MapNames["lost_part_6"] = "Lost"
 	MapNames["lost_part_7"] = "Lost"
+	-- Map Labs 03: RTSLVille
+	MapNames["ml03_backcut"] = "Map Labs 03: RTSLVille"
+	MapNames["ml03_backcut2"] = "Map Labs 03: RTSLVille"
+	MapNames["ml03_bbrawl"] = "Map Labs 03: RTSLVille"
+	MapNames["ml03_bruhmomentum"] = "Map Labs 03: RTSLVille"
+	MapNames["ml03_cityescape"] = "Map Labs 03: RTSLVille"
+	MapNames["ml03_cityescape2"] = "Map Labs 03: RTSLVille"
+	MapNames["ml03_contshift"] = "Map Labs 03: RTSLVille"
+	MapNames["ml03_contshift_bg"] = "Map Labs 03: RTSLVille"
+	MapNames["ml03_guarddown"] = "Map Labs 03: RTSLVille"
+	MapNames["ml03_map_title_here"] = "Map Labs 03: RTSLVille"
+	MapNames["ml03_mine_mansion"] = "Map Labs 03: RTSLVille"
+	MapNames["ml03_prospektor"] = "Map Labs 03: RTSLVille"
+	MapNames["ml03_railway_industrial"] = "Map Labs 03: RTSLVille"
+	MapNames["ml03_searchandrescue"] = "Map Labs 03: RTSLVille"
+	MapNames["ml03_sradius"] = "Map Labs 03: RTSLVille"
+	MapNames["ml03_ultracold01"] = "Map Labs 03: RTSLVille"
+	MapNames["ml03_ultracold02"] = "Map Labs 03: RTSLVille"
+	MapNames["storm_drain"] = "Map Labs 03: RTSLVille"
 	-- Map Labs 09: Back on Track
 	MapNames["ml09_amateur"] = "Map Labs 09: Back on Track"
 	MapNames["ml09_amateur_2"] = "Map Labs 09: Back on Track"
@@ -466,6 +485,9 @@ local function UpdateMaps()
 	MapNames["hl2_raventown3"] = "Raventown"
 	MapNames["hl2_raventown4"] = "Raventown"
 	MapNames["hl2_raventown5"] = "Raventown"
+	-- Rebel Surge
+	MapNames["city16_01"] = "Rebel Surge"
+	MapNames["city16_02"] = "Rebel Surge"
 	-- return
 	MapNames["clone_chamber"] = "return"
 	MapNames["mine_2"] = "return"
@@ -477,6 +499,9 @@ local function UpdateMaps()
 	-- Rubble
 	MapNames["hl2_rubble"] = "Rubble"
 	MapNames["hl2_rubble2"] = "Rubble"
+	MapNames["hl2_rubble3"] = "Rubble"
+	MapNames["hl2_rubble4"] = "Rubble"
+	MapNames["hl2_rubble5"] = "Rubble"
 	-- Shootbang
 	MapNames["shootbang_1"] = "Shootbang"
 	MapNames["shootbang_2"] = "Shootbang"
@@ -484,6 +509,9 @@ local function UpdateMaps()
 	MapNames["shootbang_4"] = "Shootbang"
 	MapNames["shootbang_5"] = "Shootbang"
 	MapNames["shootbang_credits"] = "Shootbang"
+	-- Sile
+	MapNames["sile1"] = "Sile"
+	MapNames["sile2"] = "Sile"
 	-- Silesia
 	MapNames["01_uvalno_villa"] = "Silesia"
 	MapNames["02_uvalno_undertower"] = "Silesia"
@@ -529,6 +557,10 @@ local function UpdateMaps()
 	MapNames["sn_level03b"] = "Spherical Nightmares"
 	MapNames["sn_level04a"] = "Spherical Nightmares"
 	MapNames["sn_outro"] = "Spherical Nightmares"
+	-- Street Hazard
+	MapNames["street_hazard_1"] = "Street Hazard"
+	MapNames["street_hazard_2"] = "Street Hazard"
+	MapNames["street_hazard_3"] = "Street Hazard"
 	-- Survivor
 	MapNames["s3_izombie"] = "Survivor"
 	MapNames["s3_suvenir"] = "Survivor"
@@ -576,6 +608,16 @@ local function UpdateMaps()
 	MapNames["overflow"] = "The Forgotten Journey Mod"
 	MapNames["stormbringer"] = "The Forgotten Journey Mod"
 	MapNames["transmission"] = "The Forgotten Journey Mod"
+	-- The Fugitive
+	MapNames["fugitive_1"] = "The Fugitive"
+	MapNames["fugitive_2"] = "The Fugitive"
+	MapNames["fugitive_3"] = "The Fugitive"
+	MapNames["fugitive_4"] = "The Fugitive"
+	MapNames["fugitive_5"] = "The Fugitive"
+	MapNames["fugitive_6"] = "The Fugitive"
+	MapNames["fugitive_7"] = "The Fugitive"
+	MapNames["fugitive_8"] = "The Fugitive"
+	MapNames["fugitive_9"] = "The Fugitive"
 	-- The Gnome Heist
 	MapNames["at03_xblah_gnome"] = "The Gnome Heist"
 	-- The Masked Prisoner
@@ -601,6 +643,8 @@ local function UpdateMaps()
 	MapNames["map5"] = "tr1p"
 	-- Weighing Nine Cinderblocks
 	MapNames["tt17_xblah"] = "Weighing Nine Cinderblocks"
+	-- Whoopservatory
+	MapNames["whoopservatory"] = "Whoopservatory"
 	-- Unexpected Conclution
 	MapNames["ue_level00"] = "Unexpected Conclution"
 	MapNames["ue_level01"] = "Unexpected Conclution"
