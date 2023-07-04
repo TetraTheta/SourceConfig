@@ -13,5 +13,12 @@ trim_trailing_whitespace = true
 [*.lua]
 indent_style = tab
 
+# Valve Key Value 3
+[*.txt]
+indent_style = tab
+
+[/ulx/**]
+indent_style = space
+
 [*.sh]
 end_of_line = lf
