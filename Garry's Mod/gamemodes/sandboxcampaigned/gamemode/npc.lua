@@ -1,7 +1,6 @@
 -- Add Network Strings we use
 util.AddNetworkString("PlayerKilledNPC")
 util.AddNetworkString("NPCKilledNPC")
-
 --[[---------------------------------------------------------
    Name: gamemode:OnNPCKilled( entity, attacker, inflictor )
    Desc: The NPC has died
@@ -9,7 +8,6 @@ util.AddNetworkString("NPCKilledNPC")
 function GM:OnNPCKilled(ent, attacker, inflictor)
 	-- Don't spam the killfeed with scripted stuff
 	if ent:GetClass() == "npc_bullseye" or ent:GetClass() == "npc_launcher" then return end
-
 	if IsValid(attacker) and attacker:GetClass() == "trigger_hurt" then
 		attacker = ent
 	end
@@ -25,7 +23,6 @@ function GM:OnNPCKilled(ent, attacker, inflictor)
 	-- Convert the inflictor to the weapon that they're holding if we can.
 	if IsValid(inflictor) and attacker == inflictor and (inflictor:IsPlayer() or inflictor:IsNPC()) then
 		inflictor = inflictor:GetActiveWeapon()
-
 		if not IsValid(attacker) then
 			inflictor = attacker
 		end
@@ -33,7 +30,6 @@ function GM:OnNPCKilled(ent, attacker, inflictor)
 
 	local InflictorClass = "worldspawn"
 	local AttackerClass = "worldspawn"
-
 	if IsValid(inflictor) then
 		InflictorClass = inflictor:GetClass()
 	end
@@ -57,6 +53,7 @@ function GM:OnNPCKilled(ent, attacker, inflictor)
 			else
 				net.WriteString(ent:GetClass())
 			end
+
 			net.WriteString(InflictorClass)
 			net.WriteEntity(attacker)
 			net.Broadcast()
@@ -75,6 +72,7 @@ function GM:OnNPCKilled(ent, attacker, inflictor)
 	else
 		net.WriteString(ent:GetClass())
 	end
+
 	net.WriteString(InflictorClass)
 	net.WriteString(AttackerClass)
 	net.Broadcast()

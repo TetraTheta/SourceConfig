@@ -18,6 +18,7 @@ local function UpdateMaps()
 	MapNames["hypnagogia"] = "Abstract Maps"
 	MapNames["hypnophobia"] = "Abstract Maps"
 	MapNames["insomnia"] = "Abstract Maps"
+	MapNames["mnemophobia_lite"] = "Abstract Maps"
 	MapNames["mnemophobia"] = "Abstract Maps"
 	MapNames["paranoia"] = "Abstract Maps"
 	MapNames["somnolence"] = "Abstract Maps"

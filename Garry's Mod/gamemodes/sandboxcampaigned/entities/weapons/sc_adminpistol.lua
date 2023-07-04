@@ -25,6 +25,8 @@ SWEP.SlotPos = 1
 SWEP.CSMuzzleFlashes = false
 SWEP.UseHands = true
 SWEP.HoldType = "pistol"
+--SWEP.WepSelection = surface.GetTextureID("")
+SWEP.IconOverride = "materials/entities/weapon_pistol.png"
 --
 -- SWEP Primary
 SWEP.Primary.Ammo = "none"
@@ -37,7 +39,7 @@ SWEP.Primary.Force = 1000000
 SWEP.Primary.Recoil = 0
 SWEP.Primary.ShotCount = 75
 SWEP.Primary.Sound = "Weapon_M4A1.Silenced"
-SWEP.Primary.Spread = 0.25
+SWEP.Primary.Spread = 0.05
 SWEP.Primary.Volume = 0.75
 --
 -- SWEP Secondary Common

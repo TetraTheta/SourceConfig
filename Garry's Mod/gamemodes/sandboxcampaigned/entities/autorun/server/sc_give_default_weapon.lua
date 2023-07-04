@@ -23,6 +23,7 @@ local function GiveBasicWeapons(ply, cmd, args, str)
 	ply:Give(adminPistolClass)
 	ply:Give("weapon_physgun")
 	ply:Give("weapon_physcannon")
+	ply:Give("gmod_tool")
 	ply:SendLua("RunConsoleCommand(\"use\", \"sc_adminpistol\")")
 	MsgN("Basic weapons are given to " .. ply:Nick())
 end

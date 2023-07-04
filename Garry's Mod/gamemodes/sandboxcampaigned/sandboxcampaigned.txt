@@ -1,0 +1,7 @@
+"sandboxcampaigned"
+{
+	"base" "sandbox"
+	"title" "Sandbox Campaigned"
+	"category" "other"
+	"menusystem" "1"
+}
