@@ -18,6 +18,7 @@ local function UpdateMaps()
 	MapNames["hypnagogia"] = "Abstract Maps"
 	MapNames["hypnophobia"] = "Abstract Maps"
 	MapNames["insomnia"] = "Abstract Maps"
+	MapNames["mnemophobia_lite"] = "Abstract Maps"
 	MapNames["mnemophobia"] = "Abstract Maps"
 	MapNames["paranoia"] = "Abstract Maps"
 	MapNames["somnolence"] = "Abstract Maps"
@@ -56,6 +57,11 @@ local function UpdateMaps()
 	-- Avenue Odessa
 	MapNames["avenueodessa"] = "Avenue Odessa"
 	MapNames["avenueodessa2"] = "Avenue Odessa"
+	-- Baryonic Predicament
+	MapNames["silly_map1"] = "Baryonic Predicament"
+	MapNames["silly_map2"] = "Baryonic Predicament"
+	MapNames["silly_map3"] = "Baryonic Predicament"
+	MapNames["silly_map4"] = "Baryonic Predicament"
 	-- Blasted Lands
 	MapNames["bl1"] = "Blasted Lands"
 	MapNames["bl2"] = "Blasted Lands"
@@ -78,10 +84,16 @@ local function UpdateMaps()
 	MapNames["level_6"] = "Bunker 66"
 	MapNames["outro"] = "Bunker 66"
 	-- Campaigns because I don't want them in the Others category
+	MapNames["anti-citizen_ch1_18"] = "Campaigns"
+	MapNames["cmpg_escape"] = "Campaigns"
 	MapNames["courage"] = "Campaigns"
+	MapNames["dead_end_road"] = "Campaigns"
 	MapNames["formoney"] = "Campaigns"
+	MapNames["kallaim"] = "Campaigns"
 	MapNames["overrun"] = "Campaigns"
 	MapNames["raid_on_nova_prison_gmod"] = "Campaigns"
+	MapNames["saint_blackmountain_map3"] = "Campaigns"
+	MapNames["streetstuck"] = "Campaigns"
 	MapNames["third_party"] = "Campaigns"
 	MapNames["train_station_zombies_campaign"] = "Campaigns"
 	-- City 25
@@ -485,6 +497,10 @@ local function UpdateMaps()
 	MapNames["hl2_raventown3"] = "Raventown"
 	MapNames["hl2_raventown4"] = "Raventown"
 	MapNames["hl2_raventown5"] = "Raventown"
+	-- Rebel Story
+	MapNames["c1_prison_01"] = "Rebel Story"
+	MapNames["c1_prison_02b"] = "Rebel Story"
+	MapNames["c1_prison_03b"] = "Rebel Story"
 	-- Rebel Surge
 	MapNames["city16_01"] = "Rebel Surge"
 	MapNames["city16_02"] = "Rebel Surge"
