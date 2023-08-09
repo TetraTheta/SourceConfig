@@ -402,6 +402,13 @@ local function UpdateMaps()
 	MapNames["c4_2_apps"] = "Mega City One"
 	MapNames["c5_1_megastructure_v3"] = "Mega City One"
 	MapNames["c5_2_core"] = "Mega City One"
+	-- MINERVA: Metastasis
+	MapNames["metastasis_1"] = "MINERVA: Metastasis"
+	--MapNames["metastasis_1_background"] = "MINERVA: Metastasis"
+	MapNames["metastasis_2"] = "MINERVA: Metastasis"
+	MapNames["metastasis_3"] = "MINERVA: Metastasis"
+	MapNames["metastasis_4a"] = "MINERVA: Metastasis"
+	MapNames["metastasis_4b"] = "MINERVA: Metastasis"
 	-- Mission Improbable
 	MapNames["mimp1"] = "Mission Improbable"
 	MapNames["mimp2"] = "Mission Improbable"
@@ -923,6 +930,7 @@ local IgnoreMaps = {
 	["ex2_background"] = true,
 	["ml09_steele01_background"] = true,
 	["ml09_traplessmansion_background"] = true,
+	["metastasis_1_background"] = true,
 }
 
 local MapList = {}
