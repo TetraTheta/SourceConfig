@@ -65,7 +65,7 @@ settings = {
 		chance = 40,
 		class = "npc_combine_s",
 		explode = false,
-		health = 100,
+		health = 200,
 		max = 3,
 		model = "models/npc/ikea_soldier.mdl",
 		proficiency = WEAPON_PROFICIENCY_PERFECT,
@@ -76,6 +76,23 @@ settings = {
 		tactical = 2,
 		type = "chaser",
 		weapon = "weapon_ar2",
+	},
+	-- 5 // https://developer.valvesoftware.com/wiki/Npc_combine_s
+	{
+		chance = 80,
+		class = "npc_combine_s",
+		explode = true,
+		health = 200,
+		max = 3,
+		model = "models/npc/ikea_soldier.mdl",
+		proficiency = WEAPON_PROFICIENCY_PERFECT,
+		scale = 1,
+		-- 131072: Don't drop grenades / 262144 : Don't drop ar2 alt fire (elite only)
+		spawnflags = bit.bor(SF_NPC_FADE_CORPSE, SF_NPC_NO_WEAPON_DROP, 131072, 262144),
+		-- tactical is npc_combine_s only!
+		tactical = 2,
+		type = "chaser",
+		weapon = "weapon_shotgun",
 	},
 }
 

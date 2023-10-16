@@ -1,9 +1,4 @@
-local MapPatterns = {}
-local MapNames = {}
-local AddonMaps = {}
-local function UpdateMaps()
-	MapPatterns = {}
-	MapNames = {}
+local function GetMapNames()
 	--
 	-- Custom map list START
 	--
@@ -86,30 +81,21 @@ local function UpdateMaps()
 	MapNames["level_6"] = "Bunker 66"
 	MapNames["outro"] = "Bunker 66"
 	-- Campaigns because I don't want them in the Others category
-	MapNames["admin_raid_a"] = "Campaigns" -- Overheid
 	MapNames["anti-citizen_ch1_18"] = "Campaigns"
 	MapNames["cmpg_escape"] = "Campaigns"
 	MapNames["combinecountry"] = "Campaigns"
 	MapNames["courage"] = "Campaigns"
 	MapNames["dead_end_road"] = "Campaigns"
-	MapNames["dontstop"] = "Campaigns"
 	MapNames["formoney"] = "Campaigns"
 	MapNames["gee_milestone4"] = "Campaigns"
 	MapNames["kallaim"] = "Campaigns"
-	MapNames["kraken"] = "Campaigns"
 	MapNames["lakeside_village"] = "Campaigns"
-	MapNames["outpost16_01"] = "Campaigns"
-	MapNames["outpost16_02"] = "Campaigns"
 	MapNames["overrun"] = "Campaigns"
 	MapNames["raid_on_nova_prison_gmod"] = "Campaigns"
 	MapNames["saint_blackmountain_map3"] = "Campaigns"
-	MapNames["shadowwalker_hvt"] = "Campaigns"
-	MapNames["shadowwalker2_maplabs"] = "Campaigns"
 	MapNames["streetstuck"] = "Campaigns"
 	MapNames["third_party"] = "Campaigns"
 	MapNames["train_station_zombies_campaign"] = "Campaigns"
-	MapNames["tt17_xblah"] = "Campaigns" -- Weighing Nine Cinderblocks
-	MapNames["whoopservatory"] = "Campaigns"
 	-- City 25
 	MapNames["city25_01"] = "City 25"
 	MapNames["city25_02"] = "City 25"
@@ -342,6 +328,8 @@ local function UpdateMaps()
 	MapNames["up_night"] = "Half-Life 2: Uncertainty Principle"
 	MapNames["up_retreat_a"] = "Half-Life 2: Uncertainty Principle"
 	MapNames["up_retreat_b"] = "Half-Life 2: Uncertainty Principle"
+	-- Kraken
+	MapNames["kraken"] = "Kraken"
 	-- Leon SP Mappack
 	MapNames["leonhl2_1"] = "Leon SP Mappack"
 	MapNames["leonhl2_1b"] = "Leon SP Mappack"
@@ -484,6 +472,8 @@ local function UpdateMaps()
 	MapNames["po_map3"] = "Omega Prison"
 	MapNames["po_map4"] = "Omega Prison"
 	MapNames["po_map5"] = "Omega Prison"
+	-- Overheid
+	MapNames["admin_raid_a"] = "Overheid"
 	-- Precursor
 	MapNames["r_map0"] = "Precursor"
 	MapNames["r_map1"] = "Precursor"
@@ -674,6 +664,10 @@ local function UpdateMaps()
 	MapNames["map3"] = "tr1p"
 	MapNames["map4"] = "tr1p"
 	MapNames["map5"] = "tr1p"
+	-- Weighing Nine Cinderblocks
+	MapNames["tt17_xblah"] = "Weighing Nine Cinderblocks"
+	-- Whoopservatory
+	MapNames["whoopservatory"] = "Whoopservatory"
 	-- Unexpected Conclution
 	MapNames["ue_level00"] = "Unexpected Conclution"
 	MapNames["ue_level01"] = "Unexpected Conclution"
@@ -866,198 +860,7 @@ local function UpdateMaps()
 	MapNames["zombiesurvival_"] = "Zombie Survival"
 	MapNames["zs_"] = "Zombie Survival"
 	MapNames["coop_"] = "Cooperative"
-	local GamemodeList = engine.GetGamemodes()
-	for k, gm in ipairs(GamemodeList) do
-		local Name = gm.title or "Unnammed Gamemode"
-		local Maps = string.Split(gm.maps, "|")
-		if Maps and gm.maps ~= "" then
-			for k, pattern in ipairs(Maps) do
-				-- When in doubt, just try to match it with string.find
-				MapPatterns[string.lower(pattern)] = Name
-			end
-		end
-	end
-
-	AddonMaps = {}
-	for k, addon in ipairs(engine.GetAddons()) do
-		local name = addon.title or "Unnammed Addon"
-		local files, folders = file.Find("maps/*.bsp", name)
-		if #files > 0 then
-			AddonMaps[name] = files
-		end
-	end
 end
 
-local favmaps
-local function LoadFavourites()
-	local cookiestr = cookie.GetString("favmaps")
-	favmaps = favmaps or (cookiestr and string.Explode(";", cookiestr) or {})
-end
-
-function UpdateAddonMapList()
-	local json = util.TableToJSON(AddonMaps)
-	if not json then return end
-	pnlMainMenu:Call("UpdateAddonMaps(" .. json .. ")")
-end
-
--- Called from JS when starting a new game
-function UpdateMapList()
-	UpdateAddonMapList()
-	local mapList = GetMapList()
-	if not mapList then return end
-	local json = util.TableToJSON(mapList)
-	if not json then return end
-	pnlMainMenu:Call("UpdateMaps(" .. json .. ")")
-end
-
-local IgnorePatterns = {"^background", "^devtest", "^ep1_background", "^ep2_background", "^styleguide",}
-local IgnoreMaps = {
-	-- Prefixes
-	["sdk_"] = true,
-	["test_"] = true,
-	["vst_"] = true,
-	-- Maps
-	["c4a1y"] = true,
-	["credits"] = true,
-	["d2_coast_02"] = true,
-	["d3_c17_02_camera"] = true,
-	["ep1_citadel_00_demo"] = true,
-	["c5m1_waterfront_sndscape"] = true,
-	["intro"] = true,
-	["test"] = true,
-	-- Other maps should be ignored
-	["creators"] = true,
-	["ex2_background"] = true,
-	["ml09_steele01_background"] = true,
-	["ml09_traplessmansion_background"] = true,
-	["metastasis_1_background"] = true,
-}
-
-local MapList = {}
-local function RefreshMaps(skip)
-	if not skip then
-		UpdateMaps()
-	end
-
-	MapList = {}
-	local maps = file.Find("maps/*.bsp", "GAME")
-	LoadFavourites()
-	for k, v in ipairs(maps) do
-		local name = string.lower(string.gsub(v, "%.bsp$", ""))
-		local prefix = string.match(name, "^(.-_)")
-		local Ignore = IgnoreMaps[name] or IgnoreMaps[prefix]
-		-- Don't loop if it's already ignored
-		if Ignore then continue end
-		for _, ignore in ipairs(IgnorePatterns) do
-			if string.find(name, ignore) then
-				Ignore = true
-				break
-			end
-		end
-
-		-- Don't add useless maps
-		if Ignore then continue end
-		-- Check if the map has a simple name or prefix
-		local Category = MapNames[name] or MapNames[prefix]
-		-- Check if the map has an embedded prefix, or is TTT/Sandbox
-		if not Category then
-			for pattern, category in pairs(MapPatterns) do
-				if string.find(name, pattern) then
-					Category = category
-				end
-			end
-		end
-
-		-- Throw all uncategorised maps into Other
-		Category = Category or "Other"
-		local fav
-		if table.HasValue(favmaps, name) then
-			fav = true
-		end
-
-		local csgo = false
-		if Category == "Counter-Strike" then
-			if file.Exists("maps/" .. name .. ".bsp", "csgo") then
-				-- Map also exists in CS:GO
-				if file.Exists("maps/" .. name .. ".bsp", "cstrike") then
-					csgo = true
-				else
-					Category = "Counter-Strike: GO"
-				end
-			end
-		end
-
-		if not MapList[Category] then
-			MapList[Category] = {}
-		end
-
-		table.insert(MapList[Category], name)
-		if fav then
-			if not MapList["Favourites"] then
-				MapList["Favourites"] = {}
-			end
-
-			table.insert(MapList["Favourites"], name)
-		end
-
-		if csgo then
-			if not MapList["Counter-Strike: GO"] then
-				MapList["Counter-Strike: GO"] = {}
-			end
-
-			-- HACK: We have to make the CS:GO name different from the CS:S name to prevent Favourites conflicts
-			table.insert(MapList["Counter-Strike: GO"], name .. " ")
-		end
-	end
-
-	-- Send the new list to the HTML menu
-	UpdateMapList()
-end
-
--- Update only after a short while for when these hooks are called very rapidly back to back
-local function DelayedRefreshMaps()
-	timer.Create("menu_refreshmaps", 0.1, 1, RefreshMaps)
-end
-
-hook.Add("MenuStart", "FindMaps", DelayedRefreshMaps)
-hook.Add("GameContentChanged", "RefreshMaps", DelayedRefreshMaps)
--- Nice maplist accessor instead of a global table
-function GetMapList()
-	return MapList
-end
-
-function ToggleFavourite(map)
-	LoadFavourites()
-	-- is favourite, remove it
-	if table.HasValue(favmaps, map) then
-		table.remove(favmaps, table.KeysFromValue(favmaps, map)[1])
-	else -- not favourite, add it
-		table.insert(favmaps, map)
-	end
-
-	cookie.Set("favmaps", table.concat(favmaps, ";"))
-	RefreshMaps(true)
-	UpdateMapList()
-end
-
-function SaveLastMap(map, cat)
-	local t = string.Explode(";", cookie.GetString("lastmap", ""))
-	if not map then
-		map = t[1] or "gm_flatgrass"
-	end
-
-	if not cat then
-		cat = t[2] or "Sandbox"
-	end
-
-	cookie.Set("lastmap", map .. ";" .. cat)
-end
-
-function LoadLastMap()
-	local t = string.Explode(";", cookie.GetString("lastmap", ""))
-	local map = t[1] or "gm_flatgrass"
-	local cat = t[2] or "Sandbox"
-	cat = string.gsub(cat, "'", "\\'")
-	if not file.Exists("maps/" .. map .. ".bsp", "GAME") then return end
-	pnlMainMenu:Call("SetLastMap('" .. map:JavascriptSafe() .. "','" .. cat:JavascriptSafe() .. "')")
+local function GetMapPatterns()
 end
