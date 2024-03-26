@@ -1,0 +1,89 @@
+{
+  "superadmin": {
+    "weapons": {
+      "weapon_crowbar": {
+        "class": "weapon_crowbar",
+        "primary": -1.0,
+        "secondary": -1.0
+      },
+      "weapon_physcannon": {
+        "class": "weapon_physcannon",
+        "primary": -1.0,
+        "secondary": -1.0
+      },
+      "weapon_physgun": {
+        "class": "weapon_physgun",
+        "primary": -1.0,
+        "secondary": -1.0
+      },
+      "weapon_pistol": {
+        "class": "weapon_pistol",
+        "primary": -1.0,
+        "secondary": -1.0
+      },
+      "weapon_357": {
+        "class": "weapon_357",
+        "primary": -1.0,
+        "secondary": -1.0
+      },
+      "sc_adminpistol_clean": {
+        "class": "sc_adminpistol_clean",
+        "primary": 1.0,
+        "secondary": 1.0
+      },
+      "weapon_smg1": {
+        "class": "weapon_smg1",
+        "primary": -1.0,
+        "secondary": -1.0
+      },
+      "weapon_ar2": {
+        "class": "weapon_ar2",
+        "primary": -1.0,
+        "secondary": -1.0
+      },
+      "weapon_shotgun": {
+        "class": "weapon_shotgun",
+        "primary": -1.0,
+        "secondary": -1.0
+      },
+      "weapon_crossbow": {
+        "class": "weapon_crossbow",
+        "primary": -1.0,
+        "secondary": -1.0
+      },
+      "weapon_frag": {
+        "class": "weapon_frag",
+        "primary": 5.0,
+        "secondary": -1.0
+      },
+      "weapon_rpg": {
+        "class": "weapon_rpg",
+        "primary": 5,
+        "secondary": -1.0
+      },
+      "weapon_slam": {
+        "class": "weapon_slam",
+        "primary": 10,
+        "secondary": -1.0
+      },
+      "gmod_tool": {
+        "class": "gmod_tool",
+        "primary": -1.0,
+        "secondary": -1.0
+      }
+    },
+    "primary": "sc_adminpistol_clean",
+    "usergroup": "superadmin"
+  },
+  "user": {
+    "primary": "gmod_camera",
+    "weapons": {
+      "gmod_camera": {
+        "class": "gmod_camera",
+        "primary": 0.0,
+        "secondary": 0.0
+      }
+    },
+    "usergroup": "user"
+  }
+}

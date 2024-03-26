@@ -8,7 +8,7 @@ sbox_maxemitters 100
 sbox_maxhoverballs 200
 sbox_maxlamps 50
 sbox_maxlights 50
-sbox_maxnpcs 50
+sbox_maxnpcs 500
 sbox_maxprops 1000
 sbox_maxragdolls 50
 sbox_maxsents 1024
