@@ -1,0 +1,85 @@
+// M3
+
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"printname"	"#HL2_Arbeit_Shotgun"
+	"viewmodel"			"models/weapons/ez2/v_shotgun.mdl"
+	"playermodel"		"models/weapons/w_arbeit_shotgun.mdl"
+	"anim_prefix"			"shotgun"
+	"bucket"			"3"
+	"bucket_position"	"0"
+	"bucket_360"			"1"
+	"bucket_position_360"	"1"
+
+	"clip_size"			"8"
+	"primary_ammo"		"Buckshot"
+	"secondary_ammo"	"None"
+
+	"weight"		"4"
+	"rumble"			"5"
+	"item_flags"		"0"
+
+	"BuiltRightHanded"	"1"
+	"AllowFlipping"		"1"
+
+	"AlwaysFirstDraw" "0"
+	"PreventPlayerSwap" "1"
+
+	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
+	SoundData
+	{
+
+		"empty"				"Default.ClipEmpty_Rifle"
+		"reload"			"Weapon_Arbeit_Shotgun.Reload"
+		"special1"			"Weapon_Arbeit_Shotgun.Special1"
+		"single_shot"		"Weapon_Arbeit_Shotgun.Single"
+		"double_shot"		"Weapon_Shotgun.Double"
+		// NPC WEAPON SOUNDS
+		"reload_npc"		"Weapon_M3.NPC_Reload"
+		"single_shot_npc"	"Weapon_M3.NPC_Single"
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	TextureData
+	{
+		"weapon"
+		{
+				"font"		"CSS_WeaponIcons"
+				"character"	"k"
+		}
+		"weapon_s"
+		{
+				"font"		"CSS_WeaponIconsSelected"
+				"character"	"k"
+		}
+		"weapon_small"
+		{
+				"font"		"CSS_WeaponIconsSmall"
+				"character"	"k"
+		}
+		"ammo"
+		{
+				"font"		"WeaponIconsSmall"
+				"character"	"s"
+		}
+		"crosshair"
+		{
+				//"font"		"Crosshairs"
+				//"character"	"Q"
+				"file"		"sprites/crosshairs"
+				"x"			"0"
+				"y"			"128"
+				"width"		"64"
+				"height"	"64"
+		}
+		"autoaim"
+		{
+				"file"		"sprites/crosshairs"
+				"x"			"0"
+				"y"			"128"
+				"width"		"64"
+				"height"	"64"
+		}
+	}
+}

@@ -1,0 +1,87 @@
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"printname"	"#HL2_SMG2"
+	"viewmodel"				"models/weapons/ez2/v_mp5k.mdl"
+	"playermodel"			"models/weapons/w_mp5k.mdl"
+	"anim_prefix"			"smg1"
+	"bucket"			"2"
+	"bucket_position"	"2"
+	"bucket_360"				"2"
+	"bucket_position_360"		"0"
+
+	"clip_size"				"45"
+	"clip2_size"			"180"
+
+	"default_clip"			"45"
+	"default_clip2"			"180"
+
+	"primary_ammo"			"Pistol"
+
+	"weight"				"2"
+	"item_flags"			"0"
+
+	"BuiltRightHanded" "1"
+	"AllowFlipping" "1"
+
+	"AlwaysFirstDraw" "0"
+
+	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
+	SoundData
+	{
+
+		"reload"			"Weapon_SMG2.Reload"
+		"reload_npc"		"Weapon_SMG2.NPC_Reload"
+		"empty"				"Weapon_SMG2.Empty"
+		"single_shot"		"Weapon_SMG2.Single"
+		"single_shot_npc"	"Weapon_SMG2.NPC_Single"
+		"special1"			"Weapon_SMG2.Special1"
+		"special2"			"Weapon_SMG2.Special2"
+		"burst"				"Weapon_SMG2.Burst"
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	TextureData
+	{
+		"weapon"
+		{
+				"font"		"ez2_WeaponIcons" [!$DECK]
+				"font"		"ez2_WeaponIcons_Deck" [$DECK]
+				"character"	"f"
+		}
+		"weapon_s"
+		{	
+				"font"		"ez2_WeaponIconsSelected" [!$DECK]
+				"font"		"ez2_WeaponIconsSelected_Deck" [$DECK]
+				"character"	"f"
+		}
+		"weapon_small"
+		{
+				"font"		"ez2_WeaponIconsSmall" [!$DECK]
+				"font"		"ez2_WeaponIconsSmall_Deck" [$DECK]
+				"character"	"f"
+		}
+		"ammo"
+		{
+				"font"		"WeaponIconsSmall" [!$DECK]
+				"font"		"WeaponIconsSmall_Deck" [$DECK]
+				"character"	"p"
+		}
+		"crosshair"
+		{
+				"file"		"sprites/crosshairs"
+				"x"			"192"
+				"y"			"64"
+				"width"		"64"
+				"height"	"64"
+		}
+		"autoaim"
+		{
+				"file"		"sprites/crosshairs"
+				"x"			"192"
+				"y"			"64"
+				"width"		"64"
+				"height"	"64"
+		}
+	}
+}

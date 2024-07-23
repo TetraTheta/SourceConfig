@@ -1,0 +1,85 @@
+// SG550
+
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"printname"	"#HL2_CSS_SG550"
+	"viewmodel"			"models/weapons/v_snip_sg550.mdl"
+	"playermodel"		"models/weapons/w_snip_sg550.mdl"
+	"anim_prefix"		"anim"
+	"bucket"			"3"
+	"bucket_position"	"1"
+	"bucket_360"			"0"
+	"bucket_position_360"	"2"
+
+	"clip_size"			"60"
+	"primary_ammo"		"556mm"
+	"secondary_ammo"	"None"
+
+	"weight"		"6"
+	"rumble"		"1"
+	"item_flags"		"0"
+	
+	"BuiltRightHanded"	"0"
+	"AllowFlipping"		"1"
+	"viewmodel_fov"		"60"
+
+	"AlwaysFirstDraw" "0"
+	"PreventPlayerSwap" "1"
+
+	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
+	SoundData
+	{
+		"reload_npc"	"Weapon_SG550.NPC_Reload"
+		"empty"			"Default.ClipEmpty_Pistol"
+		"single_shot"	"Weapon_SG550.Single"
+		"single_shot_npc"	"Weapon_SG550.NPC_Single"
+		
+		"special3"			"Default.Zoom"
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	TextureData
+	{
+		"weapon"
+		{
+				"font"		"CSS_WeaponIcons" [!$DECK]
+				"font"		"CSS_WeaponIcons_Deck" [$DECK]
+				"character"	"o"
+		}
+		"weapon_s"
+		{	
+				"font"		"CSS_WeaponIconsSelected" [!$DECK]
+				"font"		"CSS_WeaponIconsSelected_Deck" [$DECK]
+				"character"	"o"
+		}
+		"weapon_small"
+		{
+				"font"		"CSS_WeaponIconsSmall" [!$DECK]
+				"font"		"CSS_WeaponIconsSmall_Deck" [$DECK]
+				"character"	"o"
+		}
+		"ammo"
+		{
+				"font"		"CSS_WeaponIconsSmall2" [!$DECK]
+				"font"		"CSS_WeaponIconsSmall2_Deck" [$DECK]
+				"character"	"r"
+		}
+		"crosshair"
+		{
+				"file"		"sprites/crosshairs"
+				"x"			"128"
+				"y"			"128"
+				"width"		"64"
+				"height"	"64"
+		}
+		"autoaim"
+		{
+				"file"		"sprites/crosshairs"
+				"x"			"128"
+				"y"			"128"
+				"width"		"64"
+				"height"	"64"
+		}
+	}
+}

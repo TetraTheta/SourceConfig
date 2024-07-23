@@ -1,0 +1,83 @@
+// P228
+
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"printname"	"#HL2_CSS_P228"
+	"viewmodel"			"models/weapons/v_pist_p228.mdl"
+	"playermodel"		"models/weapons/w_pist_p228.mdl"
+	"anim_prefix"		"anim"
+	"bucket"			"1"
+	"bucket_position"	"0"
+	"bucket_360"			"0"
+	"bucket_position_360"	"0"
+
+	"clip_size"			"13"
+	"primary_ammo"		"357SIG"
+	"secondary_ammo"	"None"
+
+	"weight"		"4"
+	"rumble"		"1"
+	"item_flags"		"0"
+	
+	"BuiltRightHanded"	"0"
+	"AllowFlipping"		"1"
+	"viewmodel_fov"		"75"
+
+	"AlwaysFirstDraw" "0"
+	"PreventPlayerSwap" "1"
+
+	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
+	SoundData
+	{
+		"reload_npc"	"Weapon_P228.NPC_Reload"
+		"empty"			"Default.ClipEmpty_Pistol"
+		"single_shot"	"Weapon_P228.Single"
+		"single_shot_npc"	"Weapon_P228.NPC_Single"
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	TextureData
+	{
+		"weapon"
+		{
+				"font"		"CSS_WeaponIcons" [!$DECK]
+				"font"		"CSS_WeaponIcons_Deck" [$DECK]
+				"character"	"y"
+		}
+		"weapon_s"
+		{	
+				"font"		"CSS_WeaponIconsSelected" [!$DECK]
+				"font"		"CSS_WeaponIconsSelected_Deck" [$DECK]
+				"character"	"y"
+		}
+		"weapon_small"
+		{
+				"font"		"CSS_WeaponIconsSmall" [!$DECK]
+				"font"		"CSS_WeaponIconsSmall_Deck" [$DECK]
+				"character"	"y"
+		}
+		"ammo"
+		{
+				"font"		"CSS_WeaponIconsSmall2" [!$DECK]
+				"font"		"CSS_WeaponIconsSmall2_Deck" [$DECK]
+				"character"	"q"
+		}
+		"crosshair"
+		{
+				"file"		"sprites/crosshairs"
+				"x"			"64"
+				"y"			"0"
+				"width"		"64"
+				"height"	"64"
+		}
+		"autoaim"
+		{
+				"file"		"sprites/crosshairs"
+				"x"			"64"
+				"y"			"0"
+				"width"		"64"
+				"height"	"64"
+		}
+	}
+}

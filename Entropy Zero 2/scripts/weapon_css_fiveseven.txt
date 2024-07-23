@@ -1,0 +1,83 @@
+// Five-SeveN
+
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"printname"	"#HL2_CSS_FiveSeveN"
+	"viewmodel"			"models/weapons/v_pist_fiveseven.mdl"
+	"playermodel"		"models/weapons/w_pist_fiveseven.mdl"
+	"anim_prefix"		"pistol"
+	"bucket"			"1"
+	"bucket_position"	"0"
+	"bucket_360"			"0"
+	"bucket_position_360"	"0"
+
+	"clip_size"			"20"
+	"primary_ammo"		"Pistol"
+	"secondary_ammo"	"None"
+
+	"weight"		"2"
+	"rumble"		"1"
+	"item_flags"		"0"
+	
+	"BuiltRightHanded"	"0"
+	"AllowFlipping"		"1"
+	"viewmodel_fov"		"75"
+
+	"AlwaysFirstDraw" "0"
+	"PreventPlayerSwap" "1"
+
+	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
+	SoundData
+	{
+		"reload_npc"	"Weapon_FiveSeven.NPC_Reload"
+		"empty"			"Default.ClipEmpty_Pistol"
+		"single_shot"	"Weapon_FiveSeven.Single"
+		"single_shot_npc"	"Weapon_FiveSeven.NPC_Single"
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	TextureData
+	{
+		"weapon"
+		{
+				"font"		"CSS_WeaponIcons" [!$DECK]
+				"font"		"CSS_WeaponIcons_Deck" [$DECK]
+				"character"	"u"
+		}
+		"weapon_s"
+		{	
+				"font"		"CSS_WeaponIconsSelected" [!$DECK]
+				"font"		"CSS_WeaponIconsSelected_Deck" [$DECK]
+				"character"	"u"
+		}
+		"weapon_small"
+		{
+				"font"		"CSS_WeaponIconsSmall" [!$DECK]
+				"font"		"CSS_WeaponIconsSmall_Deck" [$DECK]
+				"character"	"u"
+		}
+		"ammo"
+		{
+				"font"		"WeaponIconsSmall" [!$DECK]
+				"font"		"WeaponIconsSmall_Deck" [$DECK]
+				"character"	"p"
+		}
+		"crosshair"
+		{
+				"file"		"sprites/crosshairs"
+				"x"			"64"
+				"y"			"0"
+				"width"		"64"
+				"height"	"64"
+		}
+		"autoaim"
+		{
+				"file"		"sprites/crosshairs"
+				"x"			"64"
+				"y"			"0"
+				"width"		"64"
+				"height"	"64"
+		}
+	}
+}
