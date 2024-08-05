@@ -26,11 +26,6 @@
         "primary": -1.0,
         "secondary": -1.0
       },
-      "sc_adminpistol_clean": {
-        "class": "sc_adminpistol_clean",
-        "primary": 1.0,
-        "secondary": 1.0
-      },
       "weapon_smg1": {
         "class": "weapon_smg1",
         "primary": -1.0,
@@ -70,9 +65,19 @@
         "class": "gmod_tool",
         "primary": -1.0,
         "secondary": -1.0
+      },
+      "scaw_pistol_clean": {
+        "class": "scaw_pistol_clean",
+        "primary": -1.0,
+        "secondary": -1.0
+      },
+      "scaw_mp5sd_clean": {
+        "class": "scaw_mp5sd_clean",
+        "primary": -1.0,
+        "secondary": -1.0
       }
     },
-    "primary": "sc_adminpistol_clean",
+    "primary": "scaw_mp5sd_clean",
     "usergroup": "superadmin"
   },
   "user": {
