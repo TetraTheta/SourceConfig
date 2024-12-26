@@ -1,2 +1,3 @@
+clean_workshop.cmd
 copy.cmd
 xcopy_exclude.txt
