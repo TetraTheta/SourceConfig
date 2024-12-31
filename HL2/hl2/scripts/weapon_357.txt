@@ -14,7 +14,7 @@ WeaponData
 
 	"clip_size"			"18"
 
-	"default_clip"		"18"
+	"default_clip"		"23"
 
 	"primary_ammo"		"357"
 	"secondary_ammo"	"None"
