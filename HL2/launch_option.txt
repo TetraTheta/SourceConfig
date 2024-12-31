@@ -1,0 +1,1 @@
+-novid -nojoy -heapsize 1024000 -override_vpk -refresh 60 -num_edicts 2048
