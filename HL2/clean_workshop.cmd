@@ -9,6 +9,6 @@ for /r "%target%" %%f in (*.sound.cache) do (
 )
 
 echo Removing empty directories
-red -y "%target%"
+cmd /c red -y "%target%"
 
 pause
