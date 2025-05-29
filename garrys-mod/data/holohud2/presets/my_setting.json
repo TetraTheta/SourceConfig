@@ -1,0 +1,52 @@
+{
+	"modifiers": [],
+	"settings": {
+		"damageindicator": {
+			"arrow_size": 50,
+			"arrow_stack": false,
+			"style": 1
+		},
+		"targetid": {
+			"_visible": false
+		},
+		"deathnotice": {
+			"queue": true,
+			"limit": 10,
+			"delay": 5
+		},
+		"hunger": {
+			"_visible": true
+		},
+		"startup": {
+			"_visible": false
+		},
+		"entityid": {
+			"_visible": false
+		},
+		"ammo": {
+			"clip2tray": false,
+			"clip1tray": false,
+			"ammo1tray": false,
+			"autohide": false,
+			"firemode": false,
+			"ammo2tray": false,
+			"clip1_always": true
+		},
+		"death": {
+			"_visible": false
+		},
+		"resourcehistory": {
+			"delay": 4
+		},
+		"npcid": {
+			"_visible": false
+		},
+		"suitpower": {
+			"graph": false,
+			"icontray": true
+		},
+		"zoom": {
+			"_visible": false
+		}
+	}
+}
